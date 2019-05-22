@@ -23,7 +23,7 @@ class Artist
   end
   
   def songs 
-    @@songs.name
+    @@songs
   end 
   
   def print_songs
