@@ -6,7 +6,6 @@ class Artist
 
   def initialize(name)
     @name = name
-    @songs = []
   end
   
   def save
@@ -18,14 +17,13 @@ class Artist
   end
   
   def add_song(song)
-    @songs << song
-    @@all_songs << song.name
+    @@songs << song.name
     song.artist = self
     #binding.pry 
   end
   
   def songs 
-    @@all_songs.name
+    @@songs.name
   end 
   
   def print_songs
