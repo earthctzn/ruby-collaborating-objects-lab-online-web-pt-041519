@@ -31,6 +31,9 @@ class Artist
   end
   
   def self.find_or_create_by_name(name)
+    if self.all.include?(name)
+      self.new(name)
+    end
   end
   
 end
