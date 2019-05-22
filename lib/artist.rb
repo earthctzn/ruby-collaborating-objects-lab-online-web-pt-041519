@@ -1,3 +1,4 @@
+require "pry"
 class Artist 
   @@all = []
   @@all_songs = []
@@ -17,9 +18,9 @@ class Artist
   end
   
   def add_song(song)
-    song.artist = self
     @songs << song
-    @@all_songs << song.artist
+    @@all_songs << song
+    song.artist = self
   end
   
   def songs 
@@ -32,6 +33,7 @@ class Artist
   
   def self.find_or_create_by_name(name)
     if self.all.include?(name)
+      binding.pry
       self.name
     else
        self.new(name)
