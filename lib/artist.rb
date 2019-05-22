@@ -31,7 +31,7 @@ class Artist
   end
   
   def self.find_or_create_by_name(name)
-     self.all.detect{|x| x.name == name}
+     match = self.all.detect{|x| x.name == name}
     if
       #binding.pry
       
