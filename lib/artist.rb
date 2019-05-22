@@ -19,7 +19,7 @@ class Artist
   
   def add_song(song)
     @songs << song
-    @@all_songs << song
+    @@all_songs << song.name
     song.artist = self
     binding.pry 
   end
