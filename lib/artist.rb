@@ -2,7 +2,8 @@ require "pry"
 class Artist 
   @@all = []
   
-  attr_accessor :name, :songs
+  attr_accessor :name
+  attr_reader :songs
 
   def initialize(name)
     @name = name
@@ -23,10 +24,6 @@ class Artist
     #binding.pry 
   end
   
-  def songs 
-    @songs
-  end 
-  
   def print_songs
     @songs
   end
@@ -34,8 +31,9 @@ class Artist
   def self.find_or_create_by_name(name)
      match = self.all.detect{|x| x.name == name}
     if match != nil
-       self.new(name)
+       artist = self.new(name)
     end
+    artist
   end
   
 end
