@@ -31,9 +31,9 @@ class Artist
   def self.find_or_create_by_name(name)
      match = self.all.detect{|x| x.name == name}
     if match == nil
-       artist = self.new(name)
+       match = self.new(name)
     end
-    artist
+    match
   end
   
 end
