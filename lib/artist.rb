@@ -31,7 +31,7 @@ class Artist
   end
   
   def self.find_or_create_by_name(name)
-    if self.all.include?(name)
+    if self.all.detect(name)
       #binding.pry
       sel
     else
