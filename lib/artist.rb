@@ -21,6 +21,7 @@ class Artist
     @songs << song
     @@all_songs << song
     song.artist = self
+    binding.pry 
   end
   
   def songs 
