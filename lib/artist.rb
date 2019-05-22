@@ -33,7 +33,7 @@ class Artist
   def self.find_or_create_by_name(name)
     if self.all.include?(name)
       binding.pry
-      self.name
+      self.name.uniq
     else
        self.new(name)
     end
