@@ -1,7 +1,7 @@
 require "pry"
 class Artist 
   @@all = []
-  @@all_songs = []
+  @@songs = []
   attr_accessor :name
 
   def initialize(name)
@@ -29,7 +29,7 @@ class Artist
   end 
   
   def print_songs
-    @@all_songs.each{|w| puts w.name}
+    @@songs
   end
   
   def self.find_or_create_by_name(name)
