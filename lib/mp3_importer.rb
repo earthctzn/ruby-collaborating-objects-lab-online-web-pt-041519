@@ -5,7 +5,7 @@ class MP3Importer
   end
   
   def files
-    Dir.entries(path).select{|filename| filename.include?(".mp3")
+    Dir.entries(path).select{|filename| filename.include?(".mp3")}
   end
   
   def import(list_of_filenames)
