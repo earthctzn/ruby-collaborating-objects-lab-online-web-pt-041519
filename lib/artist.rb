@@ -32,10 +32,7 @@ class Artist
   
   def self.find_or_create_by_name(name)
      match = self.all.detect{|x| x.name == name}
-    if
-      #binding.pry
-      
-    else
+    if match != nil
        self.new(name)
     end
   end
