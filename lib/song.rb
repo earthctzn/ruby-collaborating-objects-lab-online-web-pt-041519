@@ -20,5 +20,5 @@ class Song
     artist.add_song(song)
     return song 
   end
-  end
+
 end
